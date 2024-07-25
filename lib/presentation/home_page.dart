@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:livescore/presentation/match/match_page.dart';
-import 'package:livescore/presentation/new_page.dart';
+import 'package:livescore/presentation/new/new_page.dart';
 import 'package:livescore/presentation/result_page.dart';
 import 'package:livescore/presentation/upcomming_page.dart';
 

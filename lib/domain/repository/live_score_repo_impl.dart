@@ -4,6 +4,7 @@ import 'package:livescore/data/network/request/get_all_match_request.dart';
 import 'package:livescore/data/network/response/get_all_match_response.dart';
 import 'package:livescore/domain/model/all_match_vo.dart';
 import 'package:livescore/domain/model/live_match_vo.dart';
+import 'package:livescore/domain/model/new_vo.dart';
 import 'package:livescore/domain/repository/live_score_repo.dart';
 
 class LiveScoreRepoImpl extends LiveScoreRepo {
@@ -26,5 +27,10 @@ class LiveScoreRepoImpl extends LiveScoreRepo {
   @override
   Future<List<LiveMatchVo>> getLiveMatch() {
     return _dataAgent.getLiveMatch();
+  }
+
+  @override
+  Future<List<NewVo>?> getNews() {
+   return _dataAgent.getNews();
   }
 }

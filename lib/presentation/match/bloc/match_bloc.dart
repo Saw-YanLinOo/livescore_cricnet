@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:livescore/data/network/request/get_all_match_request.dart';
 import 'package:livescore/domain/model/all_match_vo.dart';
+import 'package:livescore/domain/model/live_match_vo.dart';
 import 'package:livescore/domain/repository/live_score_repo.dart';
 import 'package:livescore/domain/repository/live_score_repo_impl.dart';
 import 'package:meta/meta.dart';

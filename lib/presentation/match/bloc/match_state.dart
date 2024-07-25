@@ -12,7 +12,7 @@ enum MatchStateEnum {
 class MatchState {
   final MatchStateEnum status;
   final List<AllMatchVo>? allMatchs;
-  final List<AllMatchVo>? liveMatchs;
+  final List<LiveMatchVo>? liveMatchs;
   final List<AllMatchVo>? upcommingMatchs;
   final String? error;
 
@@ -24,12 +24,10 @@ class MatchState {
     this.error,
   });
 
-  
-
   MatchState copyWith({
     MatchStateEnum? status,
     List<AllMatchVo>? allMatchs,
-    List<AllMatchVo>? liveMatchs,
+    List<LiveMatchVo>? liveMatchs,
     List<AllMatchVo>? upcommingMatchs,
     String? error,
   }) {

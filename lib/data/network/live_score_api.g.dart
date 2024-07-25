@@ -78,13 +78,13 @@ class _LiveScoreApi implements LiveScoreApi {
   }
 
   @override
-  Future<List<AllMatchVo>> getLiveMatch() async {
+  Future<List<LiveMatchVo>> getLiveMatch() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<AllMatchVo>>(Options(
+        .fetch<List<dynamic>>(_setStreamType<List<LiveMatchVo>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -101,7 +101,7 @@ class _LiveScoreApi implements LiveScoreApi {
               baseUrl,
             ))));
     var _value = _result.data!
-        .map((dynamic i) => AllMatchVo.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) => LiveMatchVo.fromJson(i as Map<String, dynamic>))
         .toList();
     return _value;
   }

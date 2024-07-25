@@ -79,12 +79,6 @@ class MatchCardView extends StatelessWidget {
                           errorWidget: (context, url, error) =>
                               const FlutterLogo(),
                         ),
-                        // child: Image.network(
-                        //   "${match?.imageUrl}${match?.teamBImage}",
-                        //   fit: BoxFit.cover,
-                        //   errorBuilder: (context, error, stackTrace) =>
-                        //       const FlutterLogo(),
-                        // ),
                       ),
                       Text(match?.teamB ?? "")
                     ],
@@ -103,6 +97,20 @@ class MatchCardView extends StatelessWidget {
                 "${match?.venue}",
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: Text(
+                "${match?.result}",
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  color: Colors.green,
+                ),
               ),
             ),
             SizedBox(

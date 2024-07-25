@@ -56,7 +56,8 @@ class _MatchViewState extends State<MatchView> {
                   }
                   return CarouselSlider(
                     items: state.liveMatchs?.map((i) {
-                          return MatchCardView(match: i, type: "Live");
+                          return MatchCardView(
+                              match: i.toAllMatchVO(), type: "Live");
                         }).toList() ??
                         [],
                     options: CarouselOptions(
